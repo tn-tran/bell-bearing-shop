@@ -9,7 +9,7 @@ export default function ProductPageContent({ product }) {
           <Image src={product.images.edges[0].node.url} alt={product.images.edges[0].node.altText} layout="fill" objectFit="cover" />
         </div>
       </div>
-      <ProductForm />
+      <ProductForm product={product} />
     </div>
   );
 }
