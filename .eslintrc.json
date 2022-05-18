@@ -2,9 +2,7 @@
 	"extends": "next",
 	"rules": {
 		"react/no-unescaped-entities": "off",
-		"@next/next/no-page-custom-font": "off",
-		"semi": ["error", "always"],
-		"quotes": ["error", "double"]
+		"@next/next/no-page-custom-font": "off"
 	},
 	"parserOptions": {
 		"ecmaVersion": 2020,
