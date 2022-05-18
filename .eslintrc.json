@@ -1,20 +1,16 @@
 {
-  "extends": "eslint:recommended",
-  "rules": {
-    "semi": [
-      "error",
-      "always"
-    ],
-    "quotes": [
-      "error",
-      "double"
-    ]
-  },
-  "parserOptions": {
-    "ecmaVersion": 2020,
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true
-    }
-  }
+	"extends": "next",
+	"rules": {
+		"react/no-unescaped-entities": "off",
+		"@next/next/no-page-custom-font": "off",
+		"semi": ["error", "always"],
+		"quotes": ["error", "double"]
+	},
+	"parserOptions": {
+		"ecmaVersion": 2020,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	}
 }
