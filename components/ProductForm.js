@@ -11,11 +11,12 @@ export default function ProductForm({ product }) {
     variant.node.selectedOptions.map(item => {
       allOptions[item.name] = item.value
     })
+
     return {
       id: variant.node.id,
       title: product.title,
       handle: product.handle,
-      image: variant.node.images?.url,
+      image: variant.node.image.url,
       options: allOptions,
       variantTitle: variant.node.title,
       variantPrice: variant.node.priceV2.amount,
@@ -24,6 +25,7 @@ export default function ProductForm({ product }) {
   })
 
   const defaultValues = {}
+
   product.options.map(item => {
     defaultValues[item.name] = item.values[0]
   })
@@ -40,8 +42,10 @@ export default function ProductForm({ product }) {
       ...selectedOptions,
       [name]: value
     }
+
     allVariantOptions.map(item => {
       if (JSON.stringify(item.options) === JSON.stringify(selection)) {
+        // console.log({ item })
         setSelectedVariant(item)
       }
     })
