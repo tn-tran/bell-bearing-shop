@@ -27,13 +27,11 @@ export default function ShopProvider({ children }) {
     setCartOpen(true)
     if (cart.length === 0) {
       setCart([newItem])
+
       const checkout = await createCheckout(newItem.id, newItem.variantQuantity)
 
-
       setCheckoutId(checkout.id)
-
       setCheckoutUrl(checkout.webUrl)
-
       localStorage.setItem("checkout_id", JSON.stringify([newItem, checkout]))
     } else {
       let newCart = [...cart]
@@ -46,6 +44,7 @@ export default function ShopProvider({ children }) {
           newCart = [...cart, newItem]
         }
       })
+
       setCart(newCart)
 
       const newCheckout = await updateCheckout(checkoutId, newCart)
@@ -60,10 +59,6 @@ export default function ShopProvider({ children }) {
 
     const newCheckout = await updateCheckout(checkoutId, updatedCart)
     localStorage.setItem("checkout_id", JSON.stringify([updatedCart, newCheckout]))
-
-    if (cart.length === 1) {
-      setCartOpen(false)
-    }
   }
 
   return (

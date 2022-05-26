@@ -6,8 +6,11 @@ import { CartContext } from '../context/shopContext'
 
 export default function ProductForm({ product }) {
   const { addToCart } = useContext(CartContext)
+  const defaultValues = {}
+
   const allVariantOptions = product.variants.edges?.map(variant => {
     const allOptions = {}
+
     variant.node.selectedOptions.map(item => {
       allOptions[item.name] = item.value
     })
@@ -23,8 +26,6 @@ export default function ProductForm({ product }) {
       variantQuantity: 1
     }
   })
-
-  const defaultValues = {}
 
   product.options.map(item => {
     defaultValues[item.name] = item.values[0]
@@ -45,7 +46,6 @@ export default function ProductForm({ product }) {
 
     allVariantOptions.map(item => {
       if (JSON.stringify(item.options) === JSON.stringify(selection)) {
-        // console.log({ item })
         setSelectedVariant(item)
       }
     })
@@ -56,7 +56,7 @@ export default function ProductForm({ product }) {
       <h2 className='text-2xl font-bold'>
         {product.title}
       </h2>
-      <span className='pb-6'>
+      <span className='pb-3'>
         {formatter.format(product.variants.edges[0].node.priceV2.amount)}
       </span>
       {
@@ -70,10 +70,12 @@ export default function ProductForm({ product }) {
           />
         ))
       }
-      <button className='bg-black rounded-lg text-white px-2 py-3 hover:bg-gray-800'
+      <button className='bg-black rounded-lg text-white px-2 py-3 mt-3 hover:bg-gray-800'
         onClick={() => {
           addToCart(selectedVariant)
-        }}>Add To Cart</button>
+        }}>
+        Add To Cart
+      </button>
     </div>
   )
 }
