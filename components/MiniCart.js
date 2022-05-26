@@ -10,7 +10,7 @@ import { formatter } from '../utils/helpers'
 export default function MiniCart({ cart }) {
   const cancelButtonRef = useRef()
 
-  const { cartOpen, setCartOpen, checkoutUrl } = useContext(CartContext)
+  const { cartOpen, setCartOpen, checkoutUrl, removeCartItem } = useContext(CartContext)
 
   let cartTotal = 0
   cart.map(item => {
@@ -69,13 +69,12 @@ export default function MiniCart({ cart }) {
                             {cart.map((product) => (
                               <li key={product.id} className="flex py-6" >
                                 <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200 relative">
-
-                                  {/* <Image
+                                  <Image
                                     src={product.image}
                                     alt={product.title}
                                     layout="fill"
                                     objectFit='cover'
-                                  /> */}
+                                  />
                                 </div>
 
                                 <div className="ml-4 flex flex-1 flex-col">
@@ -93,6 +92,7 @@ export default function MiniCart({ cart }) {
 
                                     <div className="flex">
                                       <button
+                                        onClick={() => removeCartItem(product.id)}
                                         type="button"
                                         className="font-medium text-gray-500 hover:text-gray-800"
                                       >
