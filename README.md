@@ -1,34 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Bell Bearings Shop
 
-## Getting Started
+Bell Bearings Shop is a Shopify store that sells [bell bearings](https://eldenring.wiki.fextralife.com/Bell+Bearings).
 
-First, run the development server:
+**Link to project:** https://bell-bearings-shop.vercel.app/
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## How It's Made:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Tech used:**
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- HTML/CSS/JavaScript
+- React.js
+- TailwindCSS
+- Headless UI
+- HeroIcons
+- Next.js
+- Storefront API
+- GraphQL
+- Shopify
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Inspired by a video game <ins>[Elden Ring](https://www.google.com/search?q=elden+ring&oq=elden+ring&aqs=chrome..69i57j46i433i512j0i433i512l2j0i512l2j0i433i512l4.927j0j7&sourceid=chrome&ie=UTF-8)</ins> that sold key items called Bell Bearings that serve specific purposes, I expanded a course project that utlizes modern technologies using the Shopify + TailwindCSS + Next.js stack.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Lessons Learned:
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[Speed](https://en.wikipedia.org/wiki/Speedy_Gonzales) is vastly important especially in E-commerce. This tech stack is all about speed. Faster load times means lower bounce rate also means higher conversion. Include the fast deployment with Vercel and now you got faster iterations which means lower development costs.
