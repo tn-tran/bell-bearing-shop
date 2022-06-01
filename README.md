@@ -2,9 +2,11 @@
 
 A Shopify store that sells [bell bearings](https://eldenring.wiki.fextralife.com/Bell+Bearings).
 
+**Link to project:** https://bell-bearings-shop.vercel.app/
+
 ![](https://github.com/tn-tran/bell-bearing-shop/blob/main/bell-bearings-shop.gif)
 
-**Link to project:** https://bell-bearings-shop.vercel.app/
+
 
 ## Tech used
 
